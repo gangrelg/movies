@@ -1,0 +1,33 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/movies\/web\/themes\/custom\/movies\/scss\/style\.scss}line{font-family:\000031}}
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/movies\/web\/themes\/custom\/movies\/scss\/style\.scss}line{font-family:\000036}}
+img {
+  max-width: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/movies\/web\/themes\/custom\/movies\/scss\/style\.scss}line{font-family:\0000311}}
+.block-views-blockhome-banner-block-1 img {
+  object-fit: cover;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/movies\/web\/themes\/custom\/movies\/scss\/style\.scss}line{font-family:\0000318}}
+.upcoming-movie-container img,
+.upcoming-actor-container img {
+  margin: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/movies\/web\/themes\/custom\/movies\/scss\/style\.scss}line{font-family:\0000321}}
+.upcoming-movie-container .upcoming-description,
+.upcoming-movie-container .actor-description,
+.upcoming-actor-container .upcoming-description,
+.upcoming-actor-container .actor-description {
+  text-align: center;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/xampp\/htdocs\/movies\/web\/themes\/custom\/movies\/scss\/style\.scss}line{font-family:\0000327}}
+.pagination {
+  justify-content: center;
+}

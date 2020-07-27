@@ -1,0 +1,22 @@
+uuid: 891243d7-3688-44b5-b1a4-b929fde5640e
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.actors
+id: node.actors.promote
+field_name: promote
+entity_type: node
+bundle: actors
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

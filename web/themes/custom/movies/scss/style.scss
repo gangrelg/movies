@@ -1,0 +1,29 @@
+.navbar-brand {
+  display: flex;
+  align-items: center;
+}
+
+img {
+  max-width: 100%;
+}
+
+.block-views-blockhome-banner-block-1 {
+  img {
+    object-fit: cover;
+  }
+}
+
+.upcoming-movie-container,
+.upcoming-actor-container {
+  img {
+    margin: auto;
+  }
+  .upcoming-description,
+  .actor-description {
+    text-align: center;
+  }
+}
+
+.pagination {
+  justify-content: center;
+}

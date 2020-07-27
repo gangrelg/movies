@@ -1,0 +1,44 @@
+uuid: f40310db-c9e7-47e1-a76d-ad7527579752
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.actors.body
+    - field.field.node.actors.field_actor_name
+    - field.field.node.actors.field_birthday
+    - field.field.node.actors.field_death
+    - field.field.node.actors.field_image_reference
+    - field.field.node.actors.field_place
+    - field.field.node.actors.field_popularity
+    - field.field.node.actors.field_website
+    - node.type.actors
+  module:
+    - text
+    - user
+id: node.actors.teaser
+targetEntityType: node
+bundle: actors
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 101
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  field_actor_name: true
+  field_birthday: true
+  field_death: true
+  field_image_reference: true
+  field_place: true
+  field_popularity: true
+  field_website: true

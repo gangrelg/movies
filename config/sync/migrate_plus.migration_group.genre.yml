@@ -1,0 +1,10 @@
+uuid: 55574204-f6a3-4ebb-a30b-36dc73dee333
+langcode: en
+status: true
+dependencies: {  }
+id: genre
+label: genre
+description: ''
+source_type: null
+module: null
+shared_configuration: null

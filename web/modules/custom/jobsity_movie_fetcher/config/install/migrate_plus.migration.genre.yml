@@ -1,0 +1,29 @@
+id: genre_json
+label: JSON feed of genre vocabulary
+migration_group: genre
+
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: "https://api.themoviedb.org/3/genre/movie/list?api_key=71f7104425ea6e9b3eae35da9e7e25d7&language=en-US"
+  item_selector: genres
+  fields:
+    - name: id
+      selector: id
+    - name: name
+      selector: name
+  ids:
+    id:
+      type: integer
+
+process:
+  type:
+    plugin: default_value
+    default_value: genre
+  tid: id
+  name: name
+
+destination:
+  plugin: entity:taxonomy_term
+  default_bundle: movie_genres

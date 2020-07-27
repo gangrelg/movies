@@ -1,0 +1,39 @@
+uuid: 644ffe99-0c0b-4ad2-9508-39081b5ac424
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: L768GUUFzfjXOvJQmHcSR3EJ7aZZNALIx3WWfHsRopY
+id: genre_json
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: genre
+label: 'JSON feed of genre vocabulary'
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: 'https://api.themoviedb.org/3/genre/movie/list?api_key=71f7104425ea6e9b3eae35da9e7e25d7&language=en-US'
+  item_selector: genres
+  fields:
+    -
+      name: id
+      selector: id
+    -
+      name: name
+      selector: name
+  ids:
+    id:
+      type: integer
+process:
+  type:
+    plugin: default_value
+    default_value: genre
+  tid: id
+  name: name
+destination:
+  plugin: 'entity:taxonomy_term'
+  default_bundle: movie_genres
+migration_dependencies: null

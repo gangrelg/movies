@@ -1,0 +1,23 @@
+uuid: 68bc52c3-c5df-4174-a6b3-c923293a5257
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_popular
+    - node.type.movies
+id: node.movies.field_popular
+field_name: field_popular
+entity_type: node
+bundle: movies
+label: Popular
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

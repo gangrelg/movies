@@ -1,0 +1,21 @@
+uuid: 382c1029-7741-44b2-9461-f942e92c5444
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_death
+    - node.type.actors
+  module:
+    - datetime
+id: node.actors.field_death
+field_name: field_death
+entity_type: node
+bundle: actors
+label: Death
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

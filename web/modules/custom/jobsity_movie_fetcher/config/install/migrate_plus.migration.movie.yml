@@ -1,0 +1,45 @@
+id: movie_json
+label: JSON feed of movie content
+migration_group: Movies
+
+source:
+  plugin: url
+  data_fetcher_plugin: http
+  data_parser_plugin: json
+  urls: "https://api.themoviedb.org/3/movie/upcoming?api_key=71f7104425ea6e9b3eae35da9e7e25d7&language=en-US&page=1"
+  item_selector: results
+  fields:
+    - name: id
+      selector: id
+    - name: title
+      selector: title
+    - name: genre
+      selector: genre_ids
+    - name: poster
+      selector: poster_path
+    - name: release
+      selector: release_date
+    - name: overview
+      selector: overview
+    - name: popularity
+      selector: popularity
+  ids:
+    id:
+      type: integer
+
+process:
+  type:
+    plugin: default_value
+    default_value: movies
+  nid: id
+  title: title
+  field_genre: genre
+  field_image_reference: poster
+  field_release: release
+
+destination:
+  plugin: entity:node
+
+migration_dependencies:
+  required:
+    - genre_json

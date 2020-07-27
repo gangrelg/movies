@@ -1,0 +1,18 @@
+palette:
+  top: '#055a8e'
+  bottom: '#ffffff'
+  bg: '#ffffff'
+  sidebar: '#f6f6f2'
+  sidebarborders: '#f9f9f9'
+  footer: '#292929'
+  button: '#007bff'
+  buttonhover: '#0256b1'
+  titleslogan: '#fffeff'
+  text: '#3b3b3b'
+  link: '#b30081'
+logo: 'public://color/movies-0e7a9707/logo.svg'
+stylesheets:
+  - 'public://color/movies-0e7a9707/colors.css'
+files:
+  - 'public://color/movies-0e7a9707/logo.svg'
+  - 'public://color/movies-0e7a9707/colors.css'

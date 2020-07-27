@@ -1,0 +1,5 @@
+name: 'Jobsity Actor Fetch'
+type: module
+description: 'CM to populate actor data'
+core: 8.x
+package: 'Custom'

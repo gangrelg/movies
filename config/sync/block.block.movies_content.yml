@@ -1,0 +1,22 @@
+uuid: a1996ab5-4c31-4922-ba10-45fd2c37193a
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - movies
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: movies_content
+theme: movies
+region: content
+weight: -4
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: 'Main page content'
+  provider: system
+  label_display: '0'
+visibility: {  }

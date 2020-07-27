@@ -1,0 +1,23 @@
+uuid: 30d1ea0c-5e97-430a-a5bf-6416338c4642
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.actors
+  module:
+    - text
+id: node.actors.body
+field_name: body
+entity_type: node
+bundle: actors
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

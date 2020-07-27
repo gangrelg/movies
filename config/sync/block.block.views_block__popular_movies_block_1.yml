@@ -1,0 +1,30 @@
+uuid: 270c3b1b-65f4-497f-9b65-442d450b2b58
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.popular_movies
+  module:
+    - system
+    - views
+  theme:
+    - movies
+id: views_block__popular_movies_block_1
+theme: movies
+region: content
+weight: 0
+provider: null
+plugin: 'views_block:popular_movies-block_1'
+settings:
+  id: 'views_block:popular_movies-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility:
+  request_path:
+    id: request_path
+    pages: /home
+    negate: false
+    context_mapping: {  }

@@ -1,0 +1,63 @@
+<?php
+
+/**
+ * @file
+ * Contains jobsity_actor_fetch.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+use GuzzleHttp\Client;
+use \Drupal\node\Entity\Node;
+
+/**
+ * Implements hook_help().
+ */
+function jobsity_actor_fetch_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the jobsity_actor_fetch module.
+    case 'help.page.jobsity_actor_fetch':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('CM to populate actor data') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+function jobsity_actor_fetch_install(){
+  $client = \Drupal::httpClient();
+  $request = $client->request('GET', 'https://api.themoviedb.org/3/person/popular?api_key=71f7104425ea6e9b3eae35da9e7e25d7&language=en-US&page=1');
+  $res = (string) $request->getBody();
+  $actors = json_decode( $res, true );
+  
+  foreach($actors['results'] as $actor){
+    $request = $client->request('GET', 'https://api.themoviedb.org/3/person/'.$actor['id'].'?api_key=71f7104425ea6e9b3eae35da9e7e25d7&language=en-US');
+    $res = (string) $request->getBody();
+    $data_parsed = json_decode($res, true);
+
+    $actorId = $data_parsed['id'];
+    $photo = $data_parsed['profile_path'];
+    $name = $data_parsed['name'];
+    $birthday = $data_parsed['birthday'];
+    $place = $data_parsed['place_of_birth'];
+    $death = $data_parsed['deathday'];
+    $website = $data_parsed['homepage'];
+    $popularity = $data_parsed['popularity'];
+    $bio = $data_parsed['biography'];
+
+    $newActor = Node::create(['type' => 'actors']);
+    $newActor->set('nid', $actorId);
+    $newActor->set('title', $name);
+    $newActor->set('field_actor_name', $name);
+    $newActor->set('field_birthday', date('Y-m-d',strtotime($birthday)));
+    $newActor->set('body', $bio);
+    $newActor->set('field_death', date('Y-m-d',strtotime($death)));
+    $newActor->set('field_image_reference', $photo);
+    $newActor->set('field_place', $place);
+    $newActor->set('field_popularity', $popularity);
+    $newActor->set('field_website', $website);
+    $newActor->enforceIsNew();
+    $newActor->save();
+  }
+}

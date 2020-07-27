@@ -1,0 +1,29 @@
+uuid: b03fd76a-2dc4-4c14-94e0-dc3b023eb365
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_genre
+    - node.type.movies
+    - taxonomy.vocabulary.movie_genres
+id: node.movies.field_genre
+field_name: field_genre
+entity_type: node
+bundle: movies
+label: Genre
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      movie_genres: movie_genres
+    sort:
+      field: name
+      direction: asc
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

@@ -1,0 +1,27 @@
+uuid: 50a03f4b-b327-403a-99e6-ac2d17aa96ba
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - movies
+_core:
+  default_config_hash: 7rR9chwXvdM2H8OYMAYx9Zj3GGlPMrZp_M3ZA4thYTk
+id: movies_page_title
+theme: movies
+region: content
+weight: -8
+provider: null
+plugin: page_title_block
+settings:
+  id: page_title_block
+  label: 'Page title'
+  provider: core
+  label_display: '0'
+visibility:
+  request_path:
+    id: request_path
+    pages: /home
+    negate: true
+    context_mapping: {  }

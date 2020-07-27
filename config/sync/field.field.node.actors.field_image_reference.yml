@@ -1,0 +1,19 @@
+uuid: e287ecf1-0826-4779-8c63-26eb49065682
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_image_reference
+    - node.type.actors
+id: node.actors.field_image_reference
+field_name: field_image_reference
+entity_type: node
+bundle: actors
+label: 'Image Reference'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

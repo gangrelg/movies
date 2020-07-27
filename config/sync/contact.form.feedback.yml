@@ -1,0 +1,14 @@
+uuid: 10049ce2-2e4f-4a1c-a520-f51d65877d98
+langcode: en
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: vymHlgJy26BuI5GGj9-IXjwR3dRC5C0tij4BpWJnoqw
+id: feedback
+label: 'Website feedback'
+recipients:
+  - gangrelg@hotmail.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

@@ -1,0 +1,29 @@
+uuid: 966caa33-afd0-40c2-8447-9741f7672383
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.banner.field_banner
+    - node.type.banner
+  module:
+    - user
+id: node.banner.default
+targetEntityType: node
+bundle: banner
+mode: default
+content:
+  field_banner:
+    type: entity_reference_entity_view
+    weight: 101
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: content
+  links:
+    weight: 100
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden: {  }
